@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import { Button } from 'antd';
 class Header extends Component {
   constructor(props){
     super(props);
@@ -13,9 +13,9 @@ class Header extends Component {
       <div className="header">
         这是页面头部
         {this.state.name}
-        <button onClick={()=>{
+        <Button type="primary" onClick={()=>{
           this.props.fatherHandleClick('123','aaa')
-        }}>点我</button>
+        }}>点我</Button>
       </div>
     );
   }
