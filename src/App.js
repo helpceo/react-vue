@@ -1,34 +1,35 @@
 import React, { Component } from 'react';
+import {
+  BrowserRouter as Router,
+  Route,
+  Link
+} from 'react-router-dom'
 import Main from './components/main';
 import Footer from './components/footer';
 import Header from './components/header';
 import './index.css';
 class App extends Component {
   constructor(props){
-    super(props);
-    this.state = {
-      name:'jiang lu',
-      data:'111'
-    }
-  }
-  fatherHandleClick(name,data){
-    this.setState({
-        name,
-        data
-    })
+    super(props)
   }
   render() {
     return (
-      <div className="App">
-        <Header name = {this.state.name} fatherHandleClick={ this.fatherHandleClick.bind(this) }/>
-        <p>{this.state.name}</p>
-        <p>{this.state.data}</p>
-        <hr />
-        <Main />
-        <hr />
-        <Footer />
-      </div>
-    );
+      <Router>
+        <div>
+          <ul>
+            <li><Link to="/">Home</Link></li>
+            <li><Link to="/about">About</Link></li>
+            <li><Link to="/topics">Topics</Link></li>
+          </ul>
+    
+          <hr/>
+    
+          <Route exact path="/" component={Header}/>
+          <Route path="/about" component={Footer}/>
+          <Route path="/topics" component={Main}/>
+        </div>
+    </Router>
+    )
   }
 }
 
