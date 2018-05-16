@@ -16,17 +16,18 @@ class App extends Component {
     return (
       <Router>
         <div>
+          <Header />
+          <hr/>
           <ul>
             <li><Link to="/">Home</Link></li>
             <li><Link to="/about">About</Link></li>
             <li><Link to="/topics">Topics</Link></li>
           </ul>
-    
-          <hr/>
-    
           <Route exact path="/" component={Header}/>
           <Route path="/about" component={Footer}/>
           <Route path="/topics" component={Main}/>
+          <hr/>
+          <Footer />
         </div>
     </Router>
     )
