@@ -1,21 +1,32 @@
+import 'normalize.css';
 import React, { Component } from 'react';
 import {
   BrowserRouter as Router,
   Route,
   Link
 } from 'react-router-dom'
+import axios from 'axios'
+
 import Main from './components/main';
 import Footer from './components/footer';
 import Header from './components/header';
-import './index.css';
+import './App.css';
+
 class App extends Component {
   constructor(props){
     super(props)
   }
+  componentDidMount(){
+    //axios的例子
+    axios.get('/parts/api/v1/parts')
+    .then(res => {
+      console.log(res.data)
+    })
+  }
   render() {
     return (
       <Router>
-        <div>
+        <div className="App">
           <Header />
           <hr/>
           <ul>
