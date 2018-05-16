@@ -1,6 +1,6 @@
 # react-vue
 
-> A Vue.js project
+> A react.js project
 
 ## vue模板配置的react
 ```
