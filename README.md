@@ -2,6 +2,11 @@
 
 > A Vue.js project
 
+## vue模板配置的react
+```
+react的脚手架创建的项目,总感觉别扭,不是很清晰,就用vue的脚手架改了一个react的初始项目
+```
+
 ## Build Setup
 
 ``` bash
