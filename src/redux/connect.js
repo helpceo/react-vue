@@ -16,6 +16,6 @@ function mapDispatchToProps(dispatch){
 }  
   
 //连接组件  
-let Data = connect(mapStateToProps, mapDispatchToProps)(Reduxing)
+let reduxingData = connect(mapStateToProps, mapDispatchToProps)(Reduxing)
 
-export default Data
+export default reduxingData

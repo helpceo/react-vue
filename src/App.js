@@ -11,7 +11,7 @@ import Main from './components/main'
 import Footer from './components/footer'
 import Header from './components/header'
 import './App.css';
-import Data from './redux/connect'
+import ReduxingData from './redux/connect'
 
 class App extends Component {
   constructor(props){
@@ -40,7 +40,7 @@ class App extends Component {
           <Route path="/about" component={Footer}/>
           <Route path="/topics" component={Main}/>
           <hr/>
-          <Data />
+          <ReduxingData />
           <hr/>
           <Footer />
         </div>
