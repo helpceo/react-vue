@@ -1,8 +1,7 @@
 //reducer  
-const initialState = {  
-    text: 'Hello'  
-    }  
-const reducer = (state = initialState, action) => {  
+import store from './store'
+
+const reducer = (state = store, action) => {  
     switch (action.type) {  
         case 'CHANGE_TEXT':  
             return {  
@@ -13,7 +12,7 @@ const reducer = (state = initialState, action) => {
                 text: 'Hello world'  
             }  
         default:  
-            return initialState;  
+            return store;  
     }  
 }
 export default reducer
