@@ -5,7 +5,7 @@ import {
   Route,
   Link
 } from 'react-router-dom'
-import axios from 'axios'
+import axios from './axios'
 
 import Main from './components/main'
 import Footer from './components/footer'
