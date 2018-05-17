@@ -1,5 +1,5 @@
-import 'normalize.css';
-import React, { Component } from 'react';
+import 'normalize.css'
+import React, { Component } from 'react'
 import {
   BrowserRouter as Router,
   Route,
@@ -7,10 +7,11 @@ import {
 } from 'react-router-dom'
 import axios from 'axios'
 
-import Main from './components/main';
-import Footer from './components/footer';
-import Header from './components/header';
+import Main from './components/main'
+import Footer from './components/footer'
+import Header from './components/header'
 import './App.css';
+import Data from './redux/connect'
 
 class App extends Component {
   constructor(props){
@@ -24,6 +25,7 @@ class App extends Component {
     })
   }
   render() {
+    
     return (
       <Router>
         <div className="App">
@@ -37,6 +39,8 @@ class App extends Component {
           <Route exact path="/" component={Header}/>
           <Route path="/about" component={Footer}/>
           <Route path="/topics" component={Main}/>
+          <hr/>
+          <Data />
           <hr/>
           <Footer />
         </div>
