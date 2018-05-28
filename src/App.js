@@ -10,8 +10,8 @@ import axios from './axios'
 import Main from './components/main'
 import Footer from './components/footer'
 import Header from './components/header'
-import './App.css';
-import ReduxingData from './redux/connect'
+import './App.css'
+import Reduxing from './components/reduxing'
 
 class App extends Component {
   constructor(props){
@@ -40,7 +40,7 @@ class App extends Component {
           <Route path="/about" component={Footer}/>
           <Route path="/topics" component={Main}/>
           <hr/>
-          <ReduxingData />
+          <Reduxing />
           <hr/>
           <Footer />
         </div>

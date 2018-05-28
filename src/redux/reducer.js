@@ -1,6 +1,7 @@
 //reducer  
-import store from './store'
-
+const store = {  
+    text: 'Hello'  
+}
 const reducer = (state = store, action) => {  
     switch (action.type) {  
         case 'CHANGE_TEXT':  

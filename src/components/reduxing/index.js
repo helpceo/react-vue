@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux'
 import { Button } from 'antd'
-class Header extends Component {
-  constructor(props){
-    super(props)
-  }
+import {buttonClickAction,changeTextAction} from '../../redux/action'
+
+class Reduxing extends Component {
   render() {
     const {text, onChangeText, onButtonClick} = this.props;
     return (
@@ -16,5 +16,19 @@ class Header extends Component {
     );
   }
 }
+//映射Redux state到组件的属性  
+function mapStateToProps(state) {  
+  return { text: state.text }  
+}  
 
-export default Header;
+//映射Redux actions到组件的属性  
+function mapDispatchToProps(dispatch){  
+  return{  
+      onButtonClick:()=>dispatch(buttonClickAction),  
+      onChangeText:()=>dispatch(changeTextAction)  
+  }  
+}
+
+let reduxingData = connect(mapStateToProps, mapDispatchToProps)(Reduxing)
+
+export default reduxingData

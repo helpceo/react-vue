@@ -1,9 +1,11 @@
-//action  
+//action 
+import * as actionTypes from './actionTypes'
+
 const changeTextAction = {  
-    type:'CHANGE_TEXT'  
+    type:actionTypes.CHANGE_TEXT 
 }  
 const buttonClickAction = {  
-    type:'BUTTON_CLICK'  
+    type:actionTypes.BUTTON_CLICK
 }
 
 export {changeTextAction,buttonClickAction}
